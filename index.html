@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WebArt</title>
+
+        <!-- Bootstrap -->
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js"></script>
+        <script src="js/cssmenu.js"></script>
+
+
+
+        <script>
+            function show_panel(panel){
+                if (panel=="bilder"){
+                    $('#panel-vita').addClass('hidden');
+                    $('#panel-bilder').removeClass('hidden');
+                } else{
+                    if (panel=="vita"){
+                        $('#panel-bilder').addClass('hidden');
+                        $('#panel-vita').removeClass('hidden');
+                    }
+                }
+            }
+            $(document).ready(function(){
+                $('#link-vita').click(function(){
+                    show_panel("vita")
+                });
+                $('#link-alles , #link-bilder').click(function(){
+                    show_panel("bilder")
+                });
+            });
+        </script>
+    </head>
+<body>
+    <div id="wrap">
+        <nav id="top-navbar" class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Hanne Werhan</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">VIta</a></li>
+                <li class="nav-divider"></li>
+                <li><a href="#">2013</a></li>
+                <li><a href="#">2014</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+            <div id="lateral-navbar">
+                <div id='cssmenu'>
+                    <ul>
+                       <li><a id="brand" href='#'>Hanne Werhan</a></li>
+                       <li class='active has-sub'><a id="link-bilder" href='#'>Bilder</a>
+                          <ul>
+                             <li><a id="link-alles" href='#'>Alles</a></li>
+                             <li><a href='#'>2013</a></li>
+                             <li><a href='#'>2014</a></li>
+                          </ul>
+                       </li>
+                       <li><a id="link-vita" href='#'>Vita</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="content">
+                <div id="panel-vita" class="hidden">
+                    CV
+                </div>
+                <div id="panel-bilder">
+                    <div id="photo-carousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#photo-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#photo-carousel" data-slide-to="1"></li>
+                            <li data-target="#photo-carousel" data-slide-to="2"></li>
+                        </ol>
+                       <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active item">
+                                <div id="img_wrap" style="background-image: url('images/1.jpg');"></div>
+                                <div class="carousel-caption">
+                                  <h3>First slide label</h3>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div id="img_wrap" style="background-image: url('images/2.jpg');"></div>
+                                <div class="carousel-caption">
+                                  <h3>First slide label</h3>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div id="img_wrap" style="background-image: url('images/3.jpg');"></div>
+                                <div class="carousel-caption">
+                                  <h3>First slide label</h3>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+                        <a class="carousel-control left" href="#photo-carousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="carousel-control right" href="#photo-carousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
