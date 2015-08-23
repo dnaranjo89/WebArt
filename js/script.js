@@ -1,17 +1,3 @@
-var album ={}
-function new_picture(file, title, description){
-    return {'file': file, 'title': title, 'description': description};
-}
-
-function load_albums (){
-    var album_2012 = [];
-    album_2012.push(new_picture("images/1.jpg", "Title1", "Description1"));
-    album_2012.push(new_picture("images/2.jpg", "Title2", "Description1"));
-    album_2012.push(new_picture("images/3.jpg", "Title3", "Description1"));
-    return album_2012;
-}
-
-
 $(document).ready(function(){$('.carousel').carousel({interval:false});
 
 /* copy loaded thumbnails into carousel */
