@@ -64,7 +64,7 @@ h2{
     background: #333;
 }
 
-#img_wrap{
+.img_wrap{
   position:absolute;
   top:20px;
   left:20px;
